@@ -1,24 +1,36 @@
-import { postBiasa } from "./api.js";
-import { setInner,getValue } from "./element.js";
+function RegistrasiUser() {
+    // Fetch values from the form
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var password = document.getElementById("passwordsignup").value;
+    var email = document.getElementById("emailsignup").value;
+    var phoneString = document.getElementById("phonesignup").value;
+    var phone = parseInt(phoneString, 10);
+    var userType = document.getElementById("usertypesignup").value;
 
-export default function RegistrasiUser(){
-    let target_url = "https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signup-fancy-baru";
-    let datainjson = {
-        "username": getValue("usernamesignup"),
-        "password": getValue("passwordsignup")
-    }
-    postBiasa(target_url,datainjson,responseData);
-}
+    // Create an object with the form data
+    var formData = {
+        First_name: firstName,
+        Last_name: lastName,
+        Password: password,
+        Email: email,
+        Phone: phone,
+        User_type: userType
+    };
 
-function responseData(result) {
-    setInner("message", result.message);
-    if (result.message == "Username telah dipakai") {
-        alert("Username telah dipakai");
-    }
-    if (result.message == "Gagal Hash Password") {
-        alert("Gagal Hash Password");
-    }
-    if (result.message == "Berhasil Input data") {
-        alert("Berhasil Registrasi");
-    }
+    // Log the form data to the console (you can replace this with your API call)
+    console.log(formData);
+
+    // You can add an AJAX request here to send the form data to your server
+    // Example using fetch:
+    fetch('http://localhost:8080/user/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
 }

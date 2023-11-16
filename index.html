@@ -19,12 +19,32 @@
         <div>INI REGISTER FORM</div>
         <div class="field">
           <div class="control">
-            <input id="usernamesignup" name="usernamesignup" class="input is-medium is-rounded" type="username" placeholder="hello@example.com">
+            <input id="firstName" name="firstName" class="input is-medium is-rounded" type="text" placeholder="John">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input id="lastName" name="lastName" class="input is-medium is-rounded" type="text" placeholder="Doe">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input id="emailsignup" name="emailsignup" class="input is-medium is-rounded" type="email" placeholder="@std.ulbi.ac.id">
           </div>
         </div>
         <div class="field">
           <div class="control">
             <input id="passwordsignup" name="passwordsignup" class="input is-medium is-rounded" type="password" placeholder="**********">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input id="phonesignup" name="phonesignup" class="input is-medium is-rounded" type="number" placeholder="8xxxxxxxx">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input id="usertypesignup" name="usertypesignup" class="input is-medium is-rounded" type="text" placeholder="MAHASISWA">
           </div>
         </div>
         <br />
@@ -43,12 +63,12 @@
         <div>INI LOGIN FORM</div>
         <div class="field">
             <div class="control">
-                <input id="usernamelogin" name="usernamelogin" class="input is-medium is-rounded" type="text" placeholder="hello@example.com">
+                <input id="emailsignin" name="emailsignin" class="input is-medium is-rounded" type="text" placeholder="hello@example.com">
             </div>
         </div>
         <div class="field">
             <div class="control">
-                <input id="passwordlogin" name="passwordlogin" class="input is-medium is-rounded" type="password" placeholder="**********">
+                <input id="passwordsignin" name="passwordsignin" class="input is-medium is-rounded" type="password" placeholder="**********">
             </div>
         </div>
         <br />
@@ -97,7 +117,8 @@
   <!-- End Footer -->
 
   <script src="./src/js/script.js"></script>
-  <script type="module" src="./src/js/mainLoginRegis.js"></script>
+  <script src="./src/js/register.js"></script>
+  <script src="./src/js/login.js"></script>
 
 </body>
 </html>
