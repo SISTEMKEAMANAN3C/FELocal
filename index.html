@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Double Slider Login and Registration Form</title>
+
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./src/css/login.css">
+
+</head>
+<body>
+  <div class="container" id="container">
+
+    <div class="form-container register-container">
+      <div class="kakaka" id="register-form">
+        <div>INI REGISTER FORM</div>
+        <div class="field">
+          <div class="control">
+            <input id="usernamesignup" name="usernamesignup" class="input is-medium is-rounded" type="username" placeholder="hello@example.com">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input id="passwordsignup" name="passwordsignup" class="input is-medium is-rounded" type="password" placeholder="**********">
+          </div>
+        </div>
+        <br />
+        <button class="button is-block is-fullwidth is-primary is-medium is-rounded" type="submit" onclick="RegistrasiUser()">
+          Signup
+        </button>
+      </div>
+    </div>
+
+
+
+    <!-- Ini Start Login Form -->
+    <div class="form-container login-container">
+      
+      <div class="kakaka" id="login-form">
+        <div>INI LOGIN FORM</div>
+        <div class="field">
+            <div class="control">
+                <input id="usernamelogin" name="usernamelogin" class="input is-medium is-rounded" type="text" placeholder="hello@example.com">
+            </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <input id="passwordlogin" name="passwordlogin" class="input is-medium is-rounded" type="password" placeholder="**********">
+            </div>
+        </div>
+        <br />
+        <p id="message"></p>
+        <button class="button is-block is-fullwidth is-primary is-medium is-rounded" type="submit" onclick="LoginUser()">
+            Login
+        </button>
+    </div>
+    </div>
+    <!-- Ini End Login Form -->
+
+
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1 class="title">Hello, <br> Welcome Back Again!!</h1>
+          <p>if you have an account, login here and have fun</p>
+          <button class="ghost" id="login">Login
+            <i class="lni lni-arrow-left login"></i>
+          </button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1 class="title">Start Your <br> Journey Now</h1>
+          <p>if you don't have an account yet, join us and start your journey.</p>
+          <button class="ghost" id="register">Register
+            <i class="lni lni-arrow-right register"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Start Footer -->
+  <footer style="bottom: 0; position: fixed;" class="footer">
+    <div class="container-fluid">
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item">
+            © Copyright 2023, All Rights Reserved By ULBI 3C ❤️
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <script src="./src/js/script.js"></script>
+  <script type="module" src="./src/js/mainLoginRegis.js"></script>
+
+</body>
+</html>
